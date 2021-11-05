@@ -7,7 +7,7 @@
 *  Please see LICENSE file for your rights under this license. */
 
 // Sanitize SERVER_NAME output
-$serverName = htmlspecialchars($_SERVER["SERVER_NAME"]);
+$serverName = htmlspecialchars($_SERVER["SERVER_ADDR"]);
 // Remove external ipv6 brackets if any
 $serverName = preg_replace('/^\[(.*)\]$/', '${1}', $serverName);
 
